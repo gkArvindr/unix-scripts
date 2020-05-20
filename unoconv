@@ -1,1 +1,4 @@
 unoconv -f pdf some-file.odt
+#Converting to txt file from .odt format 
+unoconv -f txt  -o proper_format *.odt
+
