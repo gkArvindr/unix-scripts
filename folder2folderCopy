@@ -1,0 +1,10 @@
+srcdir="home/install/project1/folder1"
+dstdir="home/install/project1/folder2"
+d=$(date +%m%d%y)
+
+for srcfile in ${srcdir}/*
+do
+    dstfile=$(basename $srcfile)
+    dstfile=${dstfile/\./${d}\.}
+    cp $srcfile $dstdir/$dstfile
+done
